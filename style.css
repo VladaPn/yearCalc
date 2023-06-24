@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap');
+*{
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+img{
+    max-width: 100%;
+}
+body{
+    font-size: 32px;
+    font-family: 'Poppins', sans-serif;
+    background: hsl(0, 0%, 94%);
+}
+.container{
+    width: 50%;
+    min-width: 560px;
+    margin: 0 auto;
+}
+.calc-container{
+    margin-top: 90px;
+    background: white;
+    padding: 45px;
+    border-radius: 10px 10px 50% 10px;
+    margin-bottom: 100px;
+}
+.calc-input{
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+    border-bottom: 1px solid hsl(0, 0%, 86%);
+    padding-bottom: 38px;
+}
+.calc-input::after{
+   content: '';
+   position: absolute;
+   width: 60px;
+   height: 60px;
+   background-color: hsl(259, 100%, 65%);
+   background-image: url(assets/images/icon-arrow.svg);
+   background-position: center;
+   background-size: 60%;
+   background-repeat: no-repeat;
+   bottom: -30px;
+   right: 0;
+   border-radius: 50%;
+}
+label{
+    font-weight: 700i;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: hsl(0, 1%, 44%);
+}
+input{
+    border: 1px solid hsl(0, 0%, 86%);
+    font-size: 20px;
+    font-weight: 800;
+    max-width: 100px;
+    padding: 12px;
+    padding-left: 18px;
+    border-radius: 6px;
+}
+.calc-display p{
+    font-size: 6rem;
+    font-weight: 700;
+    font-style: italic;
+    color: hsl(0, 0%, 8%);
+}
+.calc-display span{
+    color: hsl(259, 100%, 65%);
+}
+#error-days,#error-months, #error-years{
+    display: inline-block;
+    color: hsl(0, 100%, 67%);
+    font-size: 12px;
+    padding-bottom: 5px;
+}
+@media (max-width:1000px){
+    .calc-input{
+        position: relative;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 20px;
+        border-bottom: 1px solid hsl(0, 0%, 86%);
+        padding-bottom: 38px;
+    }
+    .calc-display p{
+        font-size: 5rem;
+        font-weight: 700;
+        font-style: italic;
+        color: hsl(0, 0%, 8%);
+    }
+}
+@media (max-width:600px){
+    .container{
+        width: 90%;
+        min-width: 150px;
+    }
+    .calc-display p{
+        font-size: 4rem;
+        font-weight: 700;
+        font-style: italic;
+        color: hsl(0, 0%, 8%);
+    }
+    .calc-input{
+        position: relative;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 20px;
+        border-bottom: 1px solid hsl(0, 0%, 86%);
+        padding-bottom: 38px;
+    }
+}
